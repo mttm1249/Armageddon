@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "Relative Velocity"; ObjectID = "0j0-be-6Dr"; */
+"0j0-be-6Dr.text" = "Relative Velocity";
+
+/* Class = "UILabel"; text = "Approach Date Full"; ObjectID = "5Bg-Vs-Bgo"; */
+"5Bg-Vs-Bgo.text" = "Approach Date Full";
+
+/* Class = "UILabel"; text = "Miss Distance"; ObjectID = "5lo-cG-p3i"; */
+"5lo-cG-p3i.text" = "Miss Distance";
+
+/* Class = "UILabel"; text = "Показывать только опасные"; ObjectID = "8HQ-0b-Wny"; */
+"8HQ-0b-Wny.text" = "Показывать только опасные";
+
+/* Class = "UIBarButtonItem"; title = "Применить"; ObjectID = "DHb-5x-hDx"; */
+"DHb-5x-hDx.title" = "Применить";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "FYJ-EN-3RC"; */
+"FYJ-EN-3RC.text" = "Label";
+
+/* Class = "UISegmentedControl"; L0w-uS-htX.segmentTitles[0] = "км"; ObjectID = "L0w-uS-htX"; */
+"L0w-uS-htX.segmentTitles[0]" = "км";
+
+/* Class = "UISegmentedControl"; L0w-uS-htX.segmentTitles[1] = "л. орб."; ObjectID = "L0w-uS-htX"; */
+"L0w-uS-htX.segmentTitles[1]" = "л. орб.";
+
+/* Class = "UITabBarItem"; title = "Уничтожение"; ObjectID = "Ycl-yn-wQf"; */
+"Ycl-yn-wQf.title" = "Уничтожение";
+
+/* Class = "UINavigationItem"; title = "Армагеддон 2022"; ObjectID = "ew4-a8-bgg"; */
+"ew4-a8-bgg.title" = "Армагеддон 2022";
+
+/* Class = "UITabBarItem"; title = "Астероиды"; ObjectID = "j6P-Uu-pGe"; */
+"j6P-Uu-pGe.title" = "Астероиды";
+
+/* Class = "UIButton"; configuration.title = "ВЫЗОВ БРИГАДЫ"; ObjectID = "liv-9a-s0S"; */
+"liv-9a-s0S.configuration.title" = "ВЫЗОВ БРИГАДЫ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "liv-9a-s0S"; */
+"liv-9a-s0S.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Ед. изм. расстояний"; ObjectID = "tw6-dP-FhQ"; */
+"tw6-dP-FhQ.text" = "Ед. изм. расстояний";
+
+/* Class = "UINavigationItem"; title = "Фильтр"; ObjectID = "vIB-i8-edM"; */
+"vIB-i8-edM.title" = "Фильтр";
+
+/* Class = "UILabel"; text = "Orbiting Body"; ObjectID = "vm1-6f-2sH"; */
+"vm1-6f-2sH.text" = "Orbiting Body";

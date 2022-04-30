@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B7BAC2C5C945FA1B661CE08D /* Pods_Armageddon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879DAC72E30B0D82C5AA7B6C /* Pods_Armageddon.framework */; };
+		DA0E9C36281D2FD800F05451 /* AsteroidDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E9C35281D2FD800F05451 /* AsteroidDetailsCell.swift */; };
+		DA754844281C014C00D093D7 /* AsteroidDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA754843281C014C00D093D7 /* AsteroidDetailsModel.swift */; };
+		DA82A42528170092007735A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82A42428170092007735A4 /* AppDelegate.swift */; };
+		DA82A42728170092007735A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82A42628170092007735A4 /* SceneDelegate.swift */; };
+		DA82A42928170092007735A4 /* AsteroidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82A42828170092007735A4 /* AsteroidsViewController.swift */; };
+		DA82A42C28170092007735A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA82A42A28170092007735A4 /* Main.storyboard */; };
+		DA82A42E28170093007735A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA82A42D28170093007735A4 /* Assets.xcassets */; };
+		DA82A43128170093007735A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA82A42F28170093007735A4 /* LaunchScreen.storyboard */; };
+		DA82A439281703D6007735A4 /* ListOfDestroyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82A438281703D6007735A4 /* ListOfDestroyViewController.swift */; };
+		DA82A43B281703F3007735A4 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82A43A281703F3007735A4 /* FilterViewController.swift */; };
+		DA82A43E28171462007735A4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82A43D28171462007735A4 /* Extensions.swift */; };
+		DA82A4422817156A007735A4 /* AsteroidCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA82A4412817156A007735A4 /* AsteroidCell.xib */; };
+		DA82A4462817175C007735A4 /* AsteroidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82A4452817175C007735A4 /* AsteroidCell.swift */; };
+		DA96159828181B4E00FCBDC6 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96159728181B4E00FCBDC6 /* Time.swift */; };
+		DA96159A28181CA500FCBDC6 /* AsteroidCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96159928181CA500FCBDC6 /* AsteroidCellModel.swift */; };
+		DA96159E28182D2400FCBDC6 /* AsteroidsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96159D28182D2400FCBDC6 /* AsteroidsInteractor.swift */; };
+		DA9615A028182D8D00FCBDC6 /* AsteroidsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96159F28182D8D00FCBDC6 /* AsteroidsPresenter.swift */; };
+		DAB9ECA52817FB2800D625AD /* AsteroidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB9ECA42817FB2800D625AD /* AsteroidModel.swift */; };
+		DAB9ECA72817FE0000D625AD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB9ECA62817FE0000D625AD /* NetworkManager.swift */; };
+		DAD7F4E62819414300EF9FFB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7F4E52819414300EF9FFB /* DetailsViewController.swift */; };
+		DAEF79D4281B361300ABB931 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF79D3281B361300ABB931 /* FilterManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		267792AD9D58D9B6C3E5BC2F /* Pods-Armageddon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Armageddon.release.xcconfig"; path = "Target Support Files/Pods-Armageddon/Pods-Armageddon.release.xcconfig"; sourceTree = "<group>"; };
+		879DAC72E30B0D82C5AA7B6C /* Pods_Armageddon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Armageddon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0E9C35281D2FD800F05451 /* AsteroidDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDetailsCell.swift; sourceTree = "<group>"; };
+		DA0E9C39281D4A7700F05451 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		DA0E9C3A281D4A7700F05451 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		DA0E9C3B281D4A8900F05451 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA0E9C3C281D4A8B00F05451 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA754843281C014C00D093D7 /* AsteroidDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDetailsModel.swift; sourceTree = "<group>"; };
+		DA82A42128170092007735A4 /* Armageddon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Armageddon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA82A42428170092007735A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA82A42628170092007735A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DA82A42828170092007735A4 /* AsteroidsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsViewController.swift; sourceTree = "<group>"; };
+		DA82A42D28170093007735A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA82A43228170093007735A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA82A438281703D6007735A4 /* ListOfDestroyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfDestroyViewController.swift; sourceTree = "<group>"; };
+		DA82A43A281703F3007735A4 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		DA82A43D28171462007735A4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DA82A4412817156A007735A4 /* AsteroidCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AsteroidCell.xib; sourceTree = "<group>"; };
+		DA82A4452817175C007735A4 /* AsteroidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCell.swift; sourceTree = "<group>"; };
+		DA96159728181B4E00FCBDC6 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		DA96159928181CA500FCBDC6 /* AsteroidCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCellModel.swift; sourceTree = "<group>"; };
+		DA96159D28182D2400FCBDC6 /* AsteroidsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsInteractor.swift; sourceTree = "<group>"; };
+		DA96159F28182D8D00FCBDC6 /* AsteroidsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsPresenter.swift; sourceTree = "<group>"; };
+		DAB9ECA42817FB2800D625AD /* AsteroidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidModel.swift; sourceTree = "<group>"; };
+		DAB9ECA62817FE0000D625AD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DAD7F4E52819414300EF9FFB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		DAEF79D3281B361300ABB931 /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
+		E875561BCDFF85214A030DCD /* Pods-Armageddon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Armageddon.debug.xcconfig"; path = "Target Support Files/Pods-Armageddon/Pods-Armageddon.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA82A41E28170092007735A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7BAC2C5C945FA1B661CE08D /* Pods_Armageddon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C1F77C61D9CE8289A54EAA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				879DAC72E30B0D82C5AA7B6C /* Pods_Armageddon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0DA10298CCFF3C0B4C51205 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E875561BCDFF85214A030DCD /* Pods-Armageddon.debug.xcconfig */,
+				267792AD9D58D9B6C3E5BC2F /* Pods-Armageddon.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DA0E9C37281D3FF800F05451 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DA82A4452817175C007735A4 /* AsteroidCell.swift */,
+				DA0E9C35281D2FD800F05451 /* AsteroidDetailsCell.swift */,
+				DA82A4412817156A007735A4 /* AsteroidCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DA0E9C38281D409B00F05451 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				DA82A43D28171462007735A4 /* Extensions.swift */,
+				DAB9ECA62817FE0000D625AD /* NetworkManager.swift */,
+				DA96159D28182D2400FCBDC6 /* AsteroidsInteractor.swift */,
+				DA96159F28182D8D00FCBDC6 /* AsteroidsPresenter.swift */,
+				DAEF79D3281B361300ABB931 /* FilterManager.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		DA82A41828170092007735A4 = {
+			isa = PBXGroup;
+			children = (
+				DA82A42328170092007735A4 /* Armageddon */,
+				DA82A42228170092007735A4 /* Products */,
+				C0DA10298CCFF3C0B4C51205 /* Pods */,
+				6C1F77C61D9CE8289A54EAA8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DA82A42228170092007735A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA82A42128170092007735A4 /* Armageddon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA82A42328170092007735A4 /* Armageddon */ = {
+			isa = PBXGroup;
+			children = (
+				DA82A43F281714DE007735A4 /* Supporting Files */,
+				DA82A43C281703FE007735A4 /* ViewControllers */,
+				DAB9ECA32817FB0800D625AD /* Models */,
+				DA82A44028171515007735A4 /* Storyboards */,
+			);
+			path = Armageddon;
+			sourceTree = "<group>";
+		};
+		DA82A43C281703FE007735A4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA82A42828170092007735A4 /* AsteroidsViewController.swift */,
+				DA82A438281703D6007735A4 /* ListOfDestroyViewController.swift */,
+				DA82A43A281703F3007735A4 /* FilterViewController.swift */,
+				DAD7F4E52819414300EF9FFB /* DetailsViewController.swift */,
+				DA0E9C37281D3FF800F05451 /* Cells */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DA82A43F281714DE007735A4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA82A42428170092007735A4 /* AppDelegate.swift */,
+				DA82A42628170092007735A4 /* SceneDelegate.swift */,
+				DA82A42D28170093007735A4 /* Assets.xcassets */,
+				DA82A43228170093007735A4 /* Info.plist */,
+				DA0E9C38281D409B00F05451 /* Workers */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA82A44028171515007735A4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DA82A42A28170092007735A4 /* Main.storyboard */,
+				DA82A42F28170093007735A4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DAB9ECA32817FB0800D625AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA96159728181B4E00FCBDC6 /* Time.swift */,
+				DA96159928181CA500FCBDC6 /* AsteroidCellModel.swift */,
+				DA754843281C014C00D093D7 /* AsteroidDetailsModel.swift */,
+				DAB9ECA42817FB2800D625AD /* AsteroidModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA82A42028170092007735A4 /* Armageddon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA82A43528170093007735A4 /* Build configuration list for PBXNativeTarget "Armageddon" */;
+			buildPhases = (
+				6B150603DCE748FD2061DE20 /* [CP] Check Pods Manifest.lock */,
+				DA82A41D28170092007735A4 /* Sources */,
+				DA82A41E28170092007735A4 /* Frameworks */,
+				DA82A41F28170092007735A4 /* Resources */,
+				1B6DDBAC8F04404F04C4E6A6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Armageddon;
+			productName = Armageddon;
+			productReference = DA82A42128170092007735A4 /* Armageddon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA82A41928170092007735A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					DA82A42028170092007735A4 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = DA82A41C28170092007735A4 /* Build configuration list for PBXProject "Armageddon" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ru,
+				Base,
+			);
+			mainGroup = DA82A41828170092007735A4;
+			productRefGroup = DA82A42228170092007735A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA82A42028170092007735A4 /* Armageddon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA82A41F28170092007735A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA82A4422817156A007735A4 /* AsteroidCell.xib in Resources */,
+				DA82A43128170093007735A4 /* LaunchScreen.storyboard in Resources */,
+				DA82A42E28170093007735A4 /* Assets.xcassets in Resources */,
+				DA82A42C28170092007735A4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B6DDBAC8F04404F04C4E6A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Armageddon/Pods-Armageddon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Armageddon/Pods-Armageddon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Armageddon/Pods-Armageddon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B150603DCE748FD2061DE20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Armageddon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA82A41D28170092007735A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB9ECA72817FE0000D625AD /* NetworkManager.swift in Sources */,
+				DA96159A28181CA500FCBDC6 /* AsteroidCellModel.swift in Sources */,
+				DA96159828181B4E00FCBDC6 /* Time.swift in Sources */,
+				DA82A4462817175C007735A4 /* AsteroidCell.swift in Sources */,
+				DA82A42928170092007735A4 /* AsteroidsViewController.swift in Sources */,
+				DAEF79D4281B361300ABB931 /* FilterManager.swift in Sources */,
+				DA754844281C014C00D093D7 /* AsteroidDetailsModel.swift in Sources */,
+				DAB9ECA52817FB2800D625AD /* AsteroidModel.swift in Sources */,
+				DA82A43E28171462007735A4 /* Extensions.swift in Sources */,
+				DA96159E28182D2400FCBDC6 /* AsteroidsInteractor.swift in Sources */,
+				DA82A42528170092007735A4 /* AppDelegate.swift in Sources */,
+				DA82A439281703D6007735A4 /* ListOfDestroyViewController.swift in Sources */,
+				DA0E9C36281D2FD800F05451 /* AsteroidDetailsCell.swift in Sources */,
+				DA82A42728170092007735A4 /* SceneDelegate.swift in Sources */,
+				DAD7F4E62819414300EF9FFB /* DetailsViewController.swift in Sources */,
+				DA82A43B281703F3007735A4 /* FilterViewController.swift in Sources */,
+				DA9615A028182D8D00FCBDC6 /* AsteroidsPresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DA82A42A28170092007735A4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA0E9C39281D4A7700F05451 /* ru */,
+				DA0E9C3B281D4A8900F05451 /* ru */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DA82A42F28170093007735A4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA0E9C3A281D4A7700F05451 /* ru */,
+				DA0E9C3C281D4A8B00F05451 /* ru */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA82A43328170093007735A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA82A43428170093007735A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA82A43628170093007735A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E875561BCDFF85214A030DCD /* Pods-Armageddon.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KG89CXC5J4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Armageddon/Supporting Files/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mttm1249.Armageddon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA82A43728170093007735A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 267792AD9D58D9B6C3E5BC2F /* Pods-Armageddon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KG89CXC5J4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Armageddon/Supporting Files/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mttm1249.Armageddon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA82A41C28170092007735A4 /* Build configuration list for PBXProject "Armageddon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA82A43328170093007735A4 /* Debug */,
+				DA82A43428170093007735A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA82A43528170093007735A4 /* Build configuration list for PBXNativeTarget "Armageddon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA82A43628170093007735A4 /* Debug */,
+				DA82A43728170093007735A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA82A41928170092007735A4 /* Project object */;
+}
