@@ -24,7 +24,6 @@ class AsteroidCell: UITableViewCell {
     @IBOutlet weak var missDistanceLabel: UILabel!
     @IBOutlet weak var hazardLabel: UILabel!
     @IBOutlet weak var asteroidImage: UIImageView!
-    
     @IBOutlet weak var cellBackground: UIView!
     @IBOutlet weak var cellTopImage: UIImageView!
     @IBOutlet weak var button: UIButton!
@@ -34,12 +33,13 @@ class AsteroidCell: UITableViewCell {
         let newName = name
             .replacingOccurrences(of: "(", with: "")
             .replacingOccurrences(of: ")", with: "")
+       
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
+      
         let diametr: Double = (data.diametr as NSString).doubleValue
         let distanceKm: Double = (data.missDistanceKm as NSString).doubleValue
         let distanceLun: Double = (data.missDistanceLun as NSString).doubleValue
-
 
         let dateString = data.aproach
         let dateFormatter = DateFormatter()
@@ -49,25 +49,27 @@ class AsteroidCell: UITableViewCell {
             .replacingOccurrences(of: ",", with: " ")
             .replacingOccurrences(of: ".", with: " ")
         
-        aproachLabel.text = "Подлетает \(format)"
-        
-        
-        nameLabel.text = newName
-        diametrLabel.text = "Диаметр: \(String(format: "%.0f", diametr)) м"
-        
-        let distanceString = numberFormatter.string(from: distanceKm as NSNumber)?
+        let distanceCutted = String(format: "%.0f", distanceKm)
+        let distanceToInt = Int(distanceCutted)
+        let distanceDecimalConverted = numberFormatter.string(from: distanceToInt! as NSNumber)?
             .replacingOccurrences(of: ",", with: " ")
             .replacingOccurrences(of: ".", with: " ")
         
+        // Set up converted information
+        nameLabel.text = newName
+        aproachLabel.text = "Подлетает \(format)"
+        diametrLabel.text = "Диаметр: \(String(format: "%.0f", diametr)) м"
+        
             switch filter.distanceOption {
             case "km":
-                missDistanceLabel.text = "на расстояние \(distanceString!) км"
+                missDistanceLabel.text = "на расстояние \(distanceDecimalConverted!) км"
             case "lun":
                 missDistanceLabel.text = "на расстояние \(String(format: "%.0f", distanceLun)) лунных орбит"
             default:
-                missDistanceLabel.text = "на расстояние \(distanceString!) км"
+                missDistanceLabel.text = "на расстояние \(distanceDecimalConverted!) км"
         }
         
+        // Set up size of asteroid image to display
         switch diametr {
         case 0...299:
             let url = URL(string: "https://i.ibb.co/BN0L4gH/little-Asteroid.png")
@@ -83,7 +85,7 @@ class AsteroidCell: UITableViewCell {
             asteroidImage.kf.setImage(with: url)
         }
         
-        
+        // Set up colors of cell
         if data.isPotentiallyHazardousAsteroid == true {
             hazardLabel.textColor = .red
             hazardLabel.text = "опасен"
@@ -96,7 +98,6 @@ class AsteroidCell: UITableViewCell {
         // Get asteroid name for UserDefaults
         asteroidName = data.name
     }
-    
     
     @IBAction func destroyButtonTapped(_ sender: Any) {
         feedbackGenerator.impactOccurred()
