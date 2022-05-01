@@ -13,6 +13,7 @@ class AsteroidsViewController: UIViewController, UITableViewDataSource {
     var asteroids = [AsteroidCellModel]()
     var interactor: AsteroidsBuisnessLogic?
     var dangerousAsteroidsArray = [AsteroidCellModel]()
+    let activityIndicator = RotatingCirclesView()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -59,14 +60,6 @@ class AsteroidsViewController: UIViewController, UITableViewDataSource {
         tableView.reloadRows(at: [indexPath], with: .middle)
     }
     
-    func showLoadingIndicator() {
-        let spinner = UIActivityIndicatorView(style: .medium)
-        spinner.startAnimating()
-        spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
-        self.tableView.tableFooterView = spinner
-        self.tableView.tableFooterView?.isHidden = false
-    }
-    
     private func setup() {
         let viewController = self
         let presenter = AsteroidsPresenter()
@@ -74,6 +67,28 @@ class AsteroidsViewController: UIViewController, UITableViewDataSource {
         interactor.presenter = presenter
         presenter.viewController = viewController
         viewController.interactor = interactor
+    }
+    
+    func showLoadingIndicator() {
+        let view = UIView()
+        self.tableView.tableFooterView = view
+        configureSpinningCircles(on: view)
+        self.tableView.tableFooterView?.isHidden = false
+    }
+    
+    // Configure custom activity indicator
+    private func configureSpinningCircles(on view: UIView) {
+        view.addSubview(activityIndicator)
+
+        NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            activityIndicator.heightAnchor.constraint(equalToConstant: 0),
+            activityIndicator.widthAnchor.constraint(equalToConstant: 200)
+        ])
+        
+        activityIndicator.animate(activityIndicator.circle1, counter: 1)
+        activityIndicator.animate(activityIndicator.circle2, counter: 3)
     }
     
     private func configureTableView() {
