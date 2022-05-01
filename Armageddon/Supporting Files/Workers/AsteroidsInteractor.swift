@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
 protocol AsteroidsBuisnessLogic {
-    func fetchAsteroids()
+    func fetchAsteroids(andStop indicator: UIActivityIndicatorView)
 }
 
 class AsteroidsInteractor {
@@ -17,14 +18,18 @@ class AsteroidsInteractor {
 
 // MARK: - AsteroidsBuisnessLogic
 extension AsteroidsInteractor: AsteroidsBuisnessLogic {
-    func fetchAsteroids() {
+
+    func fetchAsteroids(andStop indicator: UIActivityIndicatorView) {
         let network = NetworkManager()
         var response = [NearEarthObject]()
         network.getResults(from: network.getAsteroidUrl()!) {
             DispatchQueue.main.async {
                 response = network.asteroids
                 self.presenter?.present(data: response)
+                    indicator.isHidden = true
+                    indicator.stopAnimating()
             }
         }
     }
 }
+

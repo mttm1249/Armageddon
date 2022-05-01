@@ -17,6 +17,7 @@ class AsteroidsPresenter {
 
 // MARK: - AsteroidsPresentationLogic
 extension AsteroidsPresenter: AsteroidsPresentationLogic {
+    
     func present(data: [NearEarthObject]) {
         let viewModelFullInfo = data.map { model -> AsteroidCellModel in
             let cellModelFullInfo = AsteroidCellModel(link: model.links.linksSelf,

@@ -30,13 +30,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="AZO-Z5-Wa7">
+                                <rect key="frame" x="197" y="101" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pQI-6O-ASH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="32i-ez-s4w" firstAttribute="leading" secondItem="pQI-6O-ASH" secondAttribute="leading" id="2GV-o1-fsb"/>
                             <constraint firstAttribute="bottom" secondItem="32i-ez-s4w" secondAttribute="bottom" id="9sO-zC-y4O"/>
+                            <constraint firstItem="pQI-6O-ASH" firstAttribute="trailing" secondItem="AZO-Z5-Wa7" secondAttribute="trailing" constant="197" id="K1H-mt-eU3"/>
+                            <constraint firstItem="AZO-Z5-Wa7" firstAttribute="leading" secondItem="pQI-6O-ASH" secondAttribute="leading" constant="197" id="WN2-rE-eYD"/>
                             <constraint firstItem="32i-ez-s4w" firstAttribute="trailing" secondItem="pQI-6O-ASH" secondAttribute="trailing" id="b5r-62-ePu"/>
+                            <constraint firstItem="AZO-Z5-Wa7" firstAttribute="top" secondItem="pQI-6O-ASH" secondAttribute="top" constant="13" id="ddD-pX-pKl"/>
                             <constraint firstItem="32i-ez-s4w" firstAttribute="top" secondItem="pQI-6O-ASH" secondAttribute="top" id="s6k-W0-vao"/>
                         </constraints>
                     </view>
@@ -48,6 +54,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="AZO-Z5-Wa7" id="X4e-u1-YuQ"/>
                         <outlet property="tableView" destination="32i-ez-s4w" id="hwY-yi-e5h"/>
                         <segue destination="DVw-vk-y7H" kind="show" identifier="details" id="Eep-d6-QK8"/>
                     </connections>
@@ -242,20 +249,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTw-fe-r09" userLabel="BackgroundView">
                                 <rect key="frame" x="20" y="105" width="374" height="114"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ед. изм. расстояний" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tw6-dP-FhQ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ед. изм. расстояний" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tw6-dP-FhQ">
                                         <rect key="frame" x="23" y="16" width="162" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Показывать только опасные" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HQ-0b-Wny">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Показывать только опасные" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8HQ-0b-Wny">
                                         <rect key="frame" x="23" y="74" width="246" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="L0w-uS-htX" userLabel="км, л. орб.">
-                                        <rect key="frame" x="223" y="11" width="140" height="31.5"/>
+                                        <rect key="frame" x="240" y="11" width="123" height="31.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="123" id="6Qf-gC-8DM"/>
+                                        </constraints>
                                         <segments>
                                             <segment title="км"/>
                                             <segment title="л. орб."/>
@@ -288,10 +298,10 @@
                                     <constraint firstItem="tw6-dP-FhQ" firstAttribute="top" secondItem="uTw-fe-r09" secondAttribute="top" constant="16" id="gcQ-Iv-hYI"/>
                                     <constraint firstAttribute="trailing" secondItem="SMM-vb-gzp" secondAttribute="trailing" id="h4E-kX-ZrP"/>
                                     <constraint firstAttribute="bottom" secondItem="8HQ-0b-Wny" secondAttribute="bottom" constant="19" id="iZy-ar-vrr"/>
+                                    <constraint firstItem="L0w-uS-htX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tw6-dP-FhQ" secondAttribute="trailing" constant="8" symbolic="YES" id="mvc-kX-9uQ"/>
                                     <constraint firstItem="tw6-dP-FhQ" firstAttribute="leading" secondItem="uTw-fe-r09" secondAttribute="leading" constant="23" id="mzj-vX-QWe"/>
                                     <constraint firstItem="8HQ-0b-Wny" firstAttribute="leading" secondItem="uTw-fe-r09" secondAttribute="leading" constant="23" id="pMk-7j-YVe"/>
                                     <constraint firstItem="SMM-vb-gzp" firstAttribute="top" secondItem="L0w-uS-htX" secondAttribute="bottom" constant="15" id="sEH-Xy-tmb"/>
-                                    <constraint firstItem="L0w-uS-htX" firstAttribute="leading" secondItem="tw6-dP-FhQ" secondAttribute="trailing" constant="38" id="tHO-Tj-wCG"/>
                                     <constraint firstItem="4uC-o8-bep" firstAttribute="leading" secondItem="8HQ-0b-Wny" secondAttribute="trailing" constant="35" id="xEB-bd-pnJ"/>
                                     <constraint firstItem="SMM-vb-gzp" firstAttribute="centerY" secondItem="uTw-fe-r09" secondAttribute="centerY" id="xqm-59-hsr"/>
                                 </constraints>

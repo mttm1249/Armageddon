@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol Activity {
+    func stopSpinner()
+}
+
 class AsteroidsViewController: UIViewController, UITableViewDataSource {
     
     let filter = FilterManager()
@@ -15,6 +19,7 @@ class AsteroidsViewController: UIViewController, UITableViewDataSource {
     var dangerousAsteroidsArray = [AsteroidCellModel]()
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +27,7 @@ class AsteroidsViewController: UIViewController, UITableViewDataSource {
         load(data: asteroids)
         configureTableView()
         time.getData()
-        interactor?.fetchAsteroids()
+        interactor?.fetchAsteroids(andStop: activityIndicator)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,6 +64,8 @@ class AsteroidsViewController: UIViewController, UITableViewDataSource {
     }
     
     private func setup() {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
         let viewController = self
         let presenter = AsteroidsPresenter()
         let interactor = AsteroidsInteractor()
@@ -76,7 +83,7 @@ class AsteroidsViewController: UIViewController, UITableViewDataSource {
     }
     
     private func beginUpdateTableView() {
-        interactor?.fetchAsteroids()
+        interactor?.fetchAsteroids(andStop: activityIndicator)
         print("updating")
     }
     
