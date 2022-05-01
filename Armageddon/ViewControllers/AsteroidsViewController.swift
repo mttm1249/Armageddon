@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol Activity {
-    func stopSpinner()
-}
-
 class AsteroidsViewController: UIViewController, UITableViewDataSource {
     
     let filter = FilterManager()
