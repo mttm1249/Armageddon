@@ -1,7 +1,7 @@
 # Armageddon
 
 ### You can see near-Earth objects and full history of each approach!
-<img src="https://user-images.githubusercontent.com/87662841/166103272-15637364-6957-4df9-a99e-dd5e9a402b38.png" width="230" height="530"> <img src="https://user-images.githubusercontent.com/87662841/166103284-f1bfb629-9733-400e-b130-2729fb448116.png" width="230" height="530"> 
+<img src="https://user-images.githubusercontent.com/87662841/166135047-d6e57365-34c1-4f44-9677-b85434f1232b.png" width="230" height="530"> <img src="https://user-images.githubusercontent.com/87662841/166135069-35734ec8-8fdb-45e1-b8da-f54f2f5e8c0d.png" width="230" height="530"> 
 
 ### You can use filters for the displayed information!
 <img src="https://user-images.githubusercontent.com/87662841/166103576-d0ebb2dc-d7d6-41d2-8bee-68b9811a2a91.png" width="230" height="530">
@@ -16,4 +16,3 @@
 4. Install on iPhone with iOS 15.0+
 
 #### Stack: Swift, UIKit, UserDefaults, URLSession, Kingfisher
-
