@@ -13,6 +13,6 @@
 1. Download archive with progect.
 2. Unzip it.
 3. Open with Xcode.
-4. Install on iPhone with iOS 15.0+
+4. Install on iPhone or iPad with iOS 15.0+
 
 #### Stack: Swift, UIKit, UserDefaults, URLSession, Kingfisher
