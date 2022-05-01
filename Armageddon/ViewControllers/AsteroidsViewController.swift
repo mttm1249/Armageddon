@@ -15,15 +15,15 @@ class AsteroidsViewController: UIViewController, UITableViewDataSource {
     var dangerousAsteroidsArray = [AsteroidCellModel]()
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showLoadingIndicator()
         setup()
         load(data: asteroids)
         configureTableView()
         time.getData()
-        interactor?.fetchAsteroids(andStop: activityIndicator)
+        interactor?.fetchAsteroids()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,9 +59,15 @@ class AsteroidsViewController: UIViewController, UITableViewDataSource {
         tableView.reloadRows(at: [indexPath], with: .middle)
     }
     
+    func showLoadingIndicator() {
+        let spinner = UIActivityIndicatorView(style: .medium)
+        spinner.startAnimating()
+        spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
+        self.tableView.tableFooterView = spinner
+        self.tableView.tableFooterView?.isHidden = false
+    }
+    
     private func setup() {
-        activityIndicator.isHidden = false
-        activityIndicator.startAnimating()
         let viewController = self
         let presenter = AsteroidsPresenter()
         let interactor = AsteroidsInteractor()
@@ -79,7 +85,7 @@ class AsteroidsViewController: UIViewController, UITableViewDataSource {
     }
     
     private func beginUpdateTableView() {
-        interactor?.fetchAsteroids(andStop: activityIndicator)
+        interactor?.fetchAsteroids()
         print("updating")
     }
     

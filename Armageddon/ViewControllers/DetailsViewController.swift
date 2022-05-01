@@ -15,19 +15,25 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showLoadingIndicator()
         tableView.delegate = self
         tableView.dataSource = self
         prepareView()
     }
     
+    func showLoadingIndicator() {
+        let spinner = UIActivityIndicatorView(style: .medium)
+        spinner.startAnimating()
+        spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
+        self.tableView.tableFooterView = spinner
+        self.tableView.tableFooterView?.isHidden = false
+    }
+    
     // Prepare view to show
     private func prepareView() {
-        activityIndicator.isHidden = false
-        activityIndicator.startAnimating()
         nameLabel.text = currentAsteroid.name
         if currentAsteroid.isPotentiallyHazardousAsteroid {
             nameLabel.textColor = .red
@@ -39,10 +45,6 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             switch result {
             case .success(let data):
                 self.parse(jsonData: data)
-                DispatchQueue.main.async {
-                    self.activityIndicator.isHidden = true
-                    self.activityIndicator.stopAnimating()
-                }
             case .failure(let error):
                 print(error.localizedDescription)
             }

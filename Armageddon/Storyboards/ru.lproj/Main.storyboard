@@ -30,19 +30,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="AZO-Z5-Wa7">
-                                <rect key="frame" x="197" y="101" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pQI-6O-ASH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="32i-ez-s4w" firstAttribute="leading" secondItem="pQI-6O-ASH" secondAttribute="leading" id="2GV-o1-fsb"/>
                             <constraint firstAttribute="bottom" secondItem="32i-ez-s4w" secondAttribute="bottom" id="9sO-zC-y4O"/>
-                            <constraint firstItem="pQI-6O-ASH" firstAttribute="trailing" secondItem="AZO-Z5-Wa7" secondAttribute="trailing" constant="197" id="K1H-mt-eU3"/>
-                            <constraint firstItem="AZO-Z5-Wa7" firstAttribute="leading" secondItem="pQI-6O-ASH" secondAttribute="leading" constant="197" id="WN2-rE-eYD"/>
                             <constraint firstItem="32i-ez-s4w" firstAttribute="trailing" secondItem="pQI-6O-ASH" secondAttribute="trailing" id="b5r-62-ePu"/>
-                            <constraint firstItem="AZO-Z5-Wa7" firstAttribute="top" secondItem="pQI-6O-ASH" secondAttribute="top" constant="13" id="ddD-pX-pKl"/>
                             <constraint firstItem="32i-ez-s4w" firstAttribute="top" secondItem="pQI-6O-ASH" secondAttribute="top" id="s6k-W0-vao"/>
                         </constraints>
                     </view>
@@ -54,7 +48,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="activityIndicator" destination="AZO-Z5-Wa7" id="X4e-u1-YuQ"/>
                         <outlet property="tableView" destination="32i-ez-s4w" id="hwY-yi-e5h"/>
                         <segue destination="DVw-vk-y7H" kind="show" identifier="details" id="Eep-d6-QK8"/>
                     </connections>
@@ -147,28 +140,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ptV-Pu-eSq">
-                                <rect key="frame" x="197" y="181" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yJb-O6-a3s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yJb-O6-a3s" firstAttribute="trailing" secondItem="FYJ-EN-3RC" secondAttribute="trailing" constant="52" id="9JT-dC-JSt"/>
-                            <constraint firstItem="ptV-Pu-eSq" firstAttribute="top" secondItem="FYJ-EN-3RC" secondAttribute="bottom" constant="23" id="BOg-Gp-T5F"/>
-                            <constraint firstItem="yJb-O6-a3s" firstAttribute="trailing" secondItem="ptV-Pu-eSq" secondAttribute="trailing" constant="197" id="DbY-NW-3va"/>
                             <constraint firstItem="FYJ-EN-3RC" firstAttribute="top" secondItem="yJb-O6-a3s" secondAttribute="top" constant="34" id="Kvc-qD-Ucq"/>
                             <constraint firstItem="G4F-7t-94s" firstAttribute="top" secondItem="FYJ-EN-3RC" secondAttribute="bottom" constant="8" symbolic="YES" id="XzR-aC-EJC"/>
                             <constraint firstItem="G4F-7t-94s" firstAttribute="trailing" secondItem="yJb-O6-a3s" secondAttribute="trailing" id="cEB-cD-2D6"/>
                             <constraint firstItem="G4F-7t-94s" firstAttribute="bottom" secondItem="yJb-O6-a3s" secondAttribute="bottom" constant="-14" id="j2D-jm-xbg"/>
                             <constraint firstItem="FYJ-EN-3RC" firstAttribute="leading" secondItem="yJb-O6-a3s" secondAttribute="leading" constant="52" id="oc5-Iw-Mf5"/>
                             <constraint firstItem="G4F-7t-94s" firstAttribute="leading" secondItem="yJb-O6-a3s" secondAttribute="leading" id="v7k-km-ZXN"/>
-                            <constraint firstItem="ptV-Pu-eSq" firstAttribute="leading" secondItem="yJb-O6-a3s" secondAttribute="leading" constant="197" id="xRz-VR-aUv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EAF-zZ-0Y3"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="ptV-Pu-eSq" id="KFc-Pb-AX7"/>
                         <outlet property="nameLabel" destination="FYJ-EN-3RC" id="tOX-XB-MJL"/>
                         <outlet property="tableView" destination="G4F-7t-94s" id="Und-EU-Puf"/>
                     </connections>
